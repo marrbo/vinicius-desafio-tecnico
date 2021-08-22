@@ -21,4 +21,20 @@ class Users
         }
         return false;
     }
+    /**
+     * verify if users send by token exists an is correct
+     * @return bool true if is correct
+     * */
+    static function isUserAuthorized($json){
+        $data = json_decode($json, true);
+        $queryStatement = 'SELECT * FROM ' . Users::TABLE;
+        $queryStatement .= ' WHERE id = :id AND';
+        $queryStatement .= ' email = :email;';
+        $bind = array(
+            ':id' => $data['id'],
+            ':email' => $data['email']
+        );
+        $result = PDOSQL::query($queryStatement, $bind);
+        return $result ? $result : false;
+    }
 }
