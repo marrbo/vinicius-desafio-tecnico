@@ -29,9 +29,10 @@ class PDOSQL
         }
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $rowCount = $stmt->rowCount();
         // desconexão
         $conn = null;
         // retorna
-        return $result ? $result : $stmt->rowCount();
+        return $rowCount > 0 && empty($result) ? $rowCount : $result;
     }
 }
