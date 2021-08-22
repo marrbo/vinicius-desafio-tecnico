@@ -3,15 +3,15 @@ namespace Models;
 
 use Database\PDOSQL;
 
-class Schools
+class Teams
 {
-    const TABLE = 'schools';
+    const TABLE = 'teams';
     /**
      * Retorna todos os items
      * @return array
      * */
     static function get(){
-        $queryStatement = 'SELECT * FROM ' . Schools::TABLE;
+        $queryStatement = 'SELECT * FROM ' . Teams::TABLE;
         $result = PDOSQL::query($queryStatement);
         return $result;
     }
@@ -20,10 +20,11 @@ class Schools
      * @return number
      * */
     static function new($data){
-        $queryStatement = 'INSERT INTO ' . Schools::TABLE;
-        $queryStatement .= ' (name) VALUES (:name)';
+        $queryStatement = 'INSERT INTO ' . Teams::TABLE;
+        $queryStatement .= ' (name, school_id) VALUES (:name, :school_id)';
         $bind = array(
-            ':name' => $data['name']
+            ':name' => $data['name'],
+            ':school_id' => $data['school_id']
         );
         $result = PDOSQL::query($queryStatement, $bind);
         return $result;
@@ -33,7 +34,7 @@ class Schools
      * @return number
      * */
     static function edit($id, $data){
-        $queryStatement = 'UPDATE ' . Schools::TABLE;
+        $queryStatement = 'UPDATE ' . Teams::TABLE;
         $queryStatement .= ' SET name = :name ';
         $queryStatement .= 'WHERE id = :id;';
         $bind = array(
@@ -45,28 +46,15 @@ class Schools
     }
     /**
      * Deleta um item
-     * @return number
+     * @return number - qtd de linhas afetadas
      * */
     static function del($id){
-        $queryStatement = 'DELETE FROM ' . Schools::TABLE;
+        $queryStatement = 'DELETE FROM ' . Teams::TABLE;
         $queryStatement .= ' WHERE id = :id;';
         $bind = array(
             ':id' => $id
         );
         $result = PDOSQL::query($queryStatement, $bind);
         return $result;
-    }
-    /**
-     * Verifica se existe um determinado id
-     * @return bool
-     * */
-    static function has($id){
-        $queryStatement = 'SELECT * FROM ' . Schools::TABLE;
-        $queryStatement .= ' WHERE id = :id;';
-        $bind = array(
-            ':id' => $id
-        );
-        $result = PDOSQL::query($queryStatement, $bind);
-        return $result ? true : false;
     }
 }
