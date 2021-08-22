@@ -13,9 +13,14 @@ Essa é uma api feita em php puro para o desafio técnico da ACP Group, como req
 - Por segurança apenas a pasta 'public' deve estar exposta na web valeu?
 - Faça bom uso.
 
+## Documentação
+
+[Documentação](docs/index.md)
+
 ## TODO
 
-- Documentação
+- Área para troca de senha.
+- Usuários com diferentes níveis de acesso.
 
 ## Licence
 

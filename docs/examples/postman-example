@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "0a403bed-6e0c-4b6b-bcbc-c92c62c16e5c",
+		"name": "Desafio ACP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "school",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api-acp/public/school/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"school",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "school",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Escola Sophia Costa Pinto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/school/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"school",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put school",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Instituto Educacional Moreira da Silva\",\r\n    \"_method\": \"PUT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/school/?id=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"school",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete school",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_method\": \"DELETE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/school/?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"school",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "team",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api-acp/public/team/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"team",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "team",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Turma 6A\",\r\n    \"school_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/team/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"team",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put team",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Turma 8B\",\r\n    \"school_id\": 1,\r\n    \"_method\": \"PUT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/team/?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"team",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete team",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_method\": \"DELETE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/team/?id=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"team",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api-acp/public/student/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"student",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Wenderson Santos\",\r\n    \"team_id\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/student/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"student",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Wenderson Santos Silva\",\r\n    \"team_id\": 5,\r\n    \"_method\": \"PUT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/student/?id=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"student",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlkXCI6XCIxXCIsXCJlbWFpbFwiOlwiYWRtaW5AYWRtaW4uY29tXCJ9Ig.IgHe2oepuHqw6e6EQSkfyP8mf-D7qu6mggjdHlmGIHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_method\": \"DELETE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api-acp/public/student/?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api-acp",
+						"public",
+						"student",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
