@@ -36,10 +36,12 @@ class Teams
     static function edit($id, $data){
         $queryStatement = 'UPDATE ' . Teams::TABLE;
         $queryStatement .= ' SET name = :name ';
+        $queryStatement .= ', school_id = :school_id ';
         $queryStatement .= 'WHERE id = :id;';
         $bind = array(
             ':id' => $id,
-            ':name' => $data['name']
+            ':name' => $data['name'],
+            ':school_id' => $data['school_id']
         );
         $result = PDOSQL::query($queryStatement, $bind);
         return $result;
