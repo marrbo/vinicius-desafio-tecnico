@@ -59,4 +59,17 @@ class Teams
         $result = PDOSQL::query($queryStatement, $bind);
         return $result;
     }
+    /**
+     * Verifica se existe um determinado id
+     * @return bool
+     * */
+    static function has($id){
+        $queryStatement = 'SELECT * FROM ' . Teams::TABLE;
+        $queryStatement .= ' WHERE id = :id;';
+        $bind = array(
+            ':id' => $id
+        );
+        $result = PDOSQL::query($queryStatement, $bind);
+        return $result ? true : false;
+    }
 }
