@@ -1,4 +1,5 @@
 {
+    "license": "proprietary",
     "require": {
         "firebase/php-jwt": "^5.4"
     }
