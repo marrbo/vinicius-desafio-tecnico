@@ -1,4 +1,6 @@
 {
+    "name" : "vinicius",
+    "description": "Desafio Técnico Vinicius",
     "license": "proprietary",
     "require": {
         "firebase/php-jwt": "^5.4"
