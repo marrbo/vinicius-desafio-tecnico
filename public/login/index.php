@@ -9,7 +9,7 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'get') == 0){
     echo json_encode($resp);
     http_response_code(400);
     die;
-};
+}
 // recebendo post verifica se existe usuário
 if(strcasecmp($_SERVER['REQUEST_METHOD'], 'post') == 0){
     $data = json_decode(file_get_contents('php://input'), true);
@@ -26,4 +26,4 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'post') == 0){
     echo json_encode($resp);
     http_response_code(401);
     die;
-};
+}
